@@ -13,6 +13,8 @@ namespace Dubi.Singleton
 
         [SerializeField] private bool persistent = true;
 
+        public bool IsLoaded => instance != null;
+
         public static T Instance
         {
             get
