@@ -19,15 +19,15 @@ namespace Dubi.Singleton
         {
             base.OnAwake();
 
-            Addressables.LoadAssetAsync<GameObject>(Key).Completed += (asyncHandler) =>
-            {
-                GameObject obj = Instantiate(asyncHandler.Result);
-                obj.transform.SetParent(this.transform);
+            //Addressables.LoadAssetAsync<GameObject>(Key).Completed += (asyncHandler) =>
+            //{
+            //    GameObject obj = Instantiate(asyncHandler.Result);
+            //    obj.transform.SetParent(this.transform);
 
-                this.component = obj.GetComponentInChildren<U>();
+            //    this.component = obj.GetComponentInChildren<U>();
 
-                OnComponentLoaded(this.component);
-            };
+            //    OnComponentLoaded(this.component);
+            //};
         }
 
         public abstract void OnComponentLoaded(U component);
