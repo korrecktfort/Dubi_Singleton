@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using System;
 
-namespace Dubi.Singleton
+namespace Dubi.SingletonSpace
 {
     public abstract class AsyncLoadSingleton<T, U> : Singleton<T> where U : Component where T : MonoBehaviour
     {
