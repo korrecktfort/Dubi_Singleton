@@ -19,10 +19,9 @@ namespace Dubi.SingletonSpace
         {
             get
             {
-                if (Quitting)
-                {
-                    return null;
-                }
+                if (Quitting)                
+                    return null;                
+
                 lock (Lock)
                 {
                     if (instance != null)
