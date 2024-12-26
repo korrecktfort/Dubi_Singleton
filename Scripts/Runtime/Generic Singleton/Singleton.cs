@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Dubi.SingletonSpace
 {
-    public class Singleton<T> : Singleton where T : MonoBehaviour
+    public abstract class Singleton<T> : Singleton where T : MonoBehaviour
     {
         private static T instance;
 
@@ -29,7 +29,7 @@ namespace Dubi.SingletonSpace
                         return instance;
                     }
 
-                    T[] instances = FindObjectsOfType<T>();
+                    T[] instances = FindObjectsByType<T>(FindObjectsSortMode.None);
                     int count = instances.Length;
                     if (count > 0)
                     {
